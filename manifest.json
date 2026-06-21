@@ -2,12 +2,12 @@
     "display_name": "TagBlaster",
     "loading_order": 20,
     "requires": [],
-    "optional": ["connection-manager"],
+    "optional": [],
     "dependencies": [],
     "js": "index.js",
     "css": "style.css",
     "author": "TagBlaster",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "homePage": "",
     "hooks": {
         "activate": "init"
