@@ -4,6 +4,8 @@
 
 TagBlaster is a SillyTavern extension for people who are tired of seeing fifty different ways to spell "bara wolf" across their character collection. It automates the tedious and error-prone process of mapping embedded card tags to actual SillyTavern tags, so you don't have to manually fix every card someone else decided to tag their own special way.
 
+> **Warning:** This extension is extremely vibe-coded, and still in development. Use at your own risk, and backup your data.
+
 ## What it does
 
 - **Tag mappings**: Map any embedded tag (the junk inside character cards) to one or more ST tags. Example: map `bara_werewolf` → Bara, Werewolf
