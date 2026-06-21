@@ -1,5 +1,6 @@
 import { tags, tag_map, addTagsToEntity, getTagKeyForEntity } from '../../../tags.js';
 import { saveSettingsDebounced, printCharactersDebounced } from '../../../../script.js';
+import { uuidv4 } from '../../../utils.js';
 
 export class ReviewUI {
     #proposals = [];
@@ -296,7 +297,7 @@ function findOrCreateTag(tagName) {
     if (existing) return existing;
 
     const tag = {
-        id: crypto.randomUUID(),
+        id: uuidv4(),
         name: tagName,
         folder_type: 'NONE',
         filter_state: 'UNDEFINED',

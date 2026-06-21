@@ -1,6 +1,7 @@
 import { extension_settings } from '../../../extensions.js';
 import { saveSettingsDebounced, characters } from '../../../../script.js';
 import { tags, tag_map, addTagsToEntity, getTagKeyForEntity } from '../../../tags.js';
+import { uuidv4 } from '../../../utils.js';
 
 const IMPORT_EXCLUDED_TAGS = new Set(['ROOT', 'TAVERN'].map(t => t.toLowerCase()));
 
@@ -538,7 +539,7 @@ function findOrCreateTag(tagName) {
     if (existing) return existing;
 
     const tag = {
-        id: crypto.randomUUID(),
+        id: uuidv4(),
         name: tagName,
         folder_type: 'NONE',
         filter_state: 'UNDEFINED',
