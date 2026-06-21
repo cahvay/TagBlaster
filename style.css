@@ -1,0 +1,535 @@
+.tag_automation_section h4 {
+    margin-bottom: 5px;
+}
+
+.tag_automation_mapping_row {
+    align-items: center;
+    padding: 2px 0;
+}
+
+.tag_automation_mapping_embedded {
+    font-weight: bold;
+    flex: 0 0 140px;
+    min-width: 140px;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tag_automation_mapping_arrow {
+    color: var(--SmartThemeQuoteColor);
+    margin: 0 4px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.tag_automation_mapping_st_tags {
+    flex: 1;
+    color: var(--SmartThemeBodyColor);
+}
+
+.ta_collapsible_header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 2px 0;
+    user-select: none;
+    color: var(--SmartThemeFontColor);
+    font-size: 0.95em;
+    opacity: 0.8;
+}
+
+.ta_collapsible_header:hover {
+    opacity: 1;
+}
+
+.ta_collapsible_icon {
+    font-size: 0.8em;
+    transition: transform 0.15s;
+}
+
+.ta_collapsible_icon.right {
+    transform: rotate(-90deg);
+}
+
+.ta_empty_hint {
+    font-size: 0.85em;
+    opacity: 0.5;
+    font-style: italic;
+    padding: 2px 0;
+}
+
+.tag_automation_mapping_pills {
+    flex: 1;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ta_mapping_pill {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    font-weight: 500;
+    background: var(--black30a);
+    color: var(--SmartThemeBodyColor);
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.tag_automation_mapping_delete {
+    flex-shrink: 0;
+}
+
+.tag_automation_unmapped_list {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.tag_automation_unmapped_row {
+    align-items: center;
+}
+
+.tag_automation_unmapped_count {
+    min-width: 36px;
+    text-align: center;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: var(--SmartThemeQuoteColor);
+    background: var(--black30a);
+    border-radius: 8px;
+    padding: 1px 6px;
+}
+
+.tag_automation_llm_suggest_list {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.tag_automation_llm_suggest_row {
+    padding: 4px 8px 4px 16px;
+    border-bottom: 1px solid var(--SmartThemeBorderColor);
+}
+
+.ta_suggest_group {
+    margin-bottom: 8px;
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+}
+
+.ta_suggest_group_target {
+    background: var(--black30a);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    padding: 8px 10px;
+    min-width: 120px;
+    max-width: 120px;
+    border-left: 1px solid var(--SmartThemeBorderColor);
+    transition: opacity 0.15s;
+}
+
+.ta_suggest_group_target.ta_target_unchecked {
+    opacity: 0.35;
+}
+
+.ta_suggest_group_sources {
+    flex: 1;
+}
+
+.tag_automation_llm_suggest_row:last-child {
+    border-bottom: none;
+}
+
+.tag_automation_llm_suggest_row.ta_row_unchecked {
+    opacity: 0.35;
+}
+
+.ta_suggest_row_top {
+    align-items: center;
+}
+
+.ta_suggest_check {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.ta_suggest_embedded_name {
+    font-weight: bold;
+    min-width: 80px;
+}
+
+.ta_suggest_pills {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.ta_suggest_pill_wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.ta_suggest_pill {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    font-weight: 500;
+    background: var(--black30a);
+    color: var(--SmartThemeBodyColor);
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.ta_suggest_pill_existing {
+    opacity: 0.85;
+}
+
+.ta_suggest_pill_badge {
+    font-size: 0.75em;
+    font-weight: bold;
+    color: var(--SmartThemeFontColor);
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+}
+
+.ta_suggest_pill_dnm {
+    background: var(--black30a);
+    color: var(--SmartThemeBodyColor);
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.ta_suggest_reasoning {
+    padding: 2px 8px 2px 32px;
+    font-size: 0.8em;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.tag_automation_llm_suggest_new {
+    font-size: 0.75em;
+    font-weight: bold;
+    color: var(--SmartThemeFontColor);
+    background: var(--SmartThemeQuoteColor);
+    border-radius: 4px;
+    padding: 1px 6px;
+    white-space: nowrap;
+}
+
+.tag_automation_progress_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag_automation_progress_popup {
+    background: var(--SmartThemeBlurTintColor);
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 400px;
+    text-align: center;
+}
+
+.tag_automation_progress_bar_container {
+    width: 100%;
+    height: 20px;
+    background: var(--black30a);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.tag_automation_progress_bar {
+    height: 100%;
+    background: var(--SmartThemeQuoteColor);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.tag_automation_review_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag_automation_review_popup {
+    background: var(--SmartThemeBlurTintColor);
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90vw;
+    max-width: 800px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.tag_automation_review_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tag_automation_review_header h3 {
+    margin: 0;
+}
+
+.tag_automation_review_bulk_actions {
+    display: flex;
+    gap: 5px;
+}
+
+.tag_automation_review_filters {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.ta_filter_btn {
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid var(--SmartThemeBorderColor);
+    background: var(--black30a);
+    color: var(--SmartThemeBodyColor);
+}
+
+.ta_filter_btn.active {
+    background: var(--SmartThemeQuoteColor);
+    color: var(--SmartThemeFontColor);
+}
+
+.tag_automation_review_list {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.ta_review_char_header {
+    padding: 5px 8px;
+    margin-top: 5px;
+    background: var(--black30a);
+    border-radius: 3px;
+}
+
+.ta_review_char_header:first-child {
+    margin-top: 0;
+}
+
+.ta_review_char_header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.ta_review_char_tags {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 1px solid var(--SmartThemeBorderColor);
+}
+
+.ta_char_toggle {
+    font-size: 0.8em;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.ta_char_toggle:hover {
+    opacity: 1;
+}
+
+.ta_review_row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    border-bottom: 1px solid var(--SmartThemeBorderColor);
+}
+
+.ta_review_row.accepted {
+    opacity: 1;
+}
+
+.ta_review_row.rejected {
+    opacity: 0.4;
+}
+
+.ta_review_checkbox {
+    flex-shrink: 0;
+}
+
+.ta_review_char {
+    min-width: 80px;
+    font-weight: 500;
+}
+
+.ta_review_arrow {
+    color: var(--SmartThemeQuoteColor);
+}
+
+.ta_review_tag {
+    font-weight: bold;
+}
+
+.ta_color_swatch {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 0.85em;
+    font-weight: 500;
+    white-space: nowrap;
+    background: var(--black30a);
+    color: var(--SmartThemeBodyColor);
+}
+
+.ta_color_swatch:hover {
+    outline: 2px solid var(--SmartThemeBodyColor);
+}
+
+.ta_review_source {
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+.ta_review_expand {
+    cursor: pointer;
+    margin-left: auto;
+    opacity: 0.5;
+    font-size: 0.8em;
+}
+
+.ta_review_expand:hover {
+    opacity: 1;
+}
+
+.ta_review_reasoning {
+    padding: 4px 8px;
+    font-size: 0.85em;
+    opacity: 0.8;
+    font-style: italic;
+    margin: 2px 0 2px 30px;
+}
+
+.ta_review_reasoning.hidden {
+    display: none;
+}
+
+.tag_automation_review_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.tag_automation_review_actions {
+    display: flex;
+    gap: 5px;
+}
+
+.checkbox_group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.ta_llm_progress_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ta_llm_progress_card {
+    background: var(--SmartThemeBlurTintColor);
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 12px;
+    padding: 24px 36px;
+    text-align: center;
+    min-width: 280px;
+}
+
+.ta_llm_progress_spinner {
+    font-size: 2em;
+    color: var(--SmartThemeQuoteColor);
+    margin-bottom: 12px;
+}
+
+.ta_llm_progress_title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 6px;
+}
+
+.ta_llm_progress_status {
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin-bottom: 16px;
+}
+
+.ta_llm_progress_stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.ta_llm_progress_stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ta_llm_progress_stat_label {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+}
+
+.ta_llm_progress_stat_value {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--SmartThemeBodyColor);
+    font-variant-numeric: tabular-nums;
+}

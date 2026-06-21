@@ -1,0 +1,56 @@
+<div id="tag_automation_settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b data-i18n="ext_tag_automation_title">TagBlaster</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="tag_automation_section">
+                <label data-i18n="ext_tag_automation_profile_label" for="tag_automation_llm_profile">Connection Profile</label>
+                <select id="tag_automation_llm_profile" class="text_pole wide100p margin0"></select>
+            </div>
+            <hr>
+            <div class="tag_automation_section">
+                <h4 data-i18n="ext_tag_automation_mappings_title">Tag Mappings</h4>
+                <div class="ta_collapsible">
+                    <div class="ta_collapsible_header" data-target="tag_automation_mappings_list_block">
+                        <span class="ta_collapsible_icon fa-solid fa-circle-chevron-down right"></span>
+                        <span>Mappings</span>
+                    </div>
+                    <div id="tag_automation_mappings_list_block" class="ta_collapsible_body marginBot5" style="display:none">
+                        <div id="tag_automation_mappings_list"></div>
+                    </div>
+                </div>
+                <div class="ta_collapsible">
+                    <div class="ta_collapsible_header" data-target="tag_automation_blocked_list_block">
+                        <span class="ta_collapsible_icon fa-solid fa-circle-chevron-down right"></span>
+                        <span>Blocked Tags</span>
+                    </div>
+                    <div id="tag_automation_blocked_list_block" class="ta_collapsible_body marginBot5" style="display:none">
+                        <div id="tag_automation_blocked_list"></div>
+                    </div>
+                </div>
+                <div class="flex-container gap5px flexnowrap marginBot5">
+                    <input id="tag_automation_mapping_embedded" class="text_pole flex1" placeholder="Embedded tag name" maxlength="50" />
+                    <input id="tag_automation_mapping_st_tags" class="text_pole flex2" placeholder="ST tag names (comma-separated)" />
+                    <div id="tag_automation_mapping_add" class="menu_button menu_button_icon margin0" title="Add mapping">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+                <small class="ta_hint" style="display:block;margin-bottom:5px;opacity:0.6">Leave target blank to block an embedded tag from importing.</small>
+                <div id="tag_automation_import_unmapped" class="menu_button wide100p marginBot5">
+                    <i class="fa-solid fa-file-import margin-right-10px"></i>
+                    <span data-i18n="ext_tag_automation_import_unmapped">Import Unmapped Embedded Tags</span>
+                </div>
+            </div>
+            <hr>
+            <div class="tag_automation_section">
+                <h4>Settings</h4>
+                <label class="checkbox_label">
+                    <input type="checkbox" id="tag_automation_require_colors" checked />
+                    <span data-i18n="ext_tag_automation_require_colors">Require colors for new tags</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
