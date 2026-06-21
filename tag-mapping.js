@@ -249,21 +249,28 @@ export class TagMappingManager {
         </div>`;
 
         const LLM_SUGGEST_RESULT = 100;
+        let capturedMinPrevalence = savedMinPrevalence;
         const result = await callGenericPopup(html, POPUP_TYPE.CONFIRM, 'Import Unmapped Embedded Tags', {
             okButton: 'Add Mappings',
             cancelButton: 'Cancel',
             customButtons: [
                 { text: 'LLM Suggest', result: LLM_SUGGEST_RESULT, icon: 'fa-robot' },
             ],
+            onClosing: (popup) => {
+                const input = popup.dlg.querySelector('#ta_min_prevalence_input');
+                if (input) {
+                    capturedMinPrevalence = Number(input.value) || savedMinPrevalence;
+                }
+                return true;
+            },
         });
 
         if (result !== 1 && result !== LLM_SUGGEST_RESULT) return;
 
         if (result === LLM_SUGGEST_RESULT) {
-            const minPrevalence = Number(document.getElementById('ta_min_prevalence_input')?.value) || savedMinPrevalence;
-            extension_settings.tag_automation.llm_min_prevalence = minPrevalence;
+            extension_settings.tag_automation.llm_min_prevalence = capturedMinPrevalence;
             saveSettingsDebounced();
-            await this.llmSuggestMappings(unmapped, minPrevalence);
+            await this.llmSuggestMappings(unmapped, capturedMinPrevalence);
             return;
         }
 
